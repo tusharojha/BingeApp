@@ -15,52 +15,78 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Container(
+        margin: EdgeInsets.all(10),
+        child: IconButton(
+          iconSize: 50,
+          onPressed: (){},
+          icon: Icon(Icons.chevron_right, color: colors.withName('pink'),),
+        ),
+      ),
       body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            welcomeLabel(),
-            Container(
-              margin: EdgeInsets.only(top: 30),
-              child: RichText(
-                text: TextSpan(
-                    style: TextStyle(fontSize: 20, color: Colors.black),
-                    children: [
-                      TextSpan(
-                          text: 'SELECT YOUR ',
-                          style: GoogleFonts.getFont('Chelsea Market')
-                      ),
-                      TextSpan(
-                          text: 'ALTER EGO',
-                          style: GoogleFonts.getFont('Chelsea Market',
-                              color: Color.fromRGBO(253, 1, 102, 1))
-                      )
-                    ]
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              welcomeLabel(),
+              Container(
+                margin: EdgeInsets.only(top: 30),
+                child: RichText(
+                  text: TextSpan(
+                      style: TextStyle(fontSize: 20, color: Colors.black),
+                      children: [
+                        TextSpan(
+                            text: 'SELECT YOUR ',
+                            style: GoogleFonts.getFont('Chelsea Market')
+                        ),
+                        TextSpan(
+                            text: 'ALTER EGO',
+                            style: GoogleFonts.getFont('Chelsea Market',
+                                color: Color.fromRGBO(253, 1, 102, 1))
+                        )
+                      ]
+                  ),
                 ),
               ),
-            ),
-            Container(
-              margin: EdgeInsets.all(10),
-              child: Wrap(
-                children: <Widget>[
-                  AvatarOption(color: colors.withName("yellow"), avatar: 1,),
-                  AvatarOption(color: colors.withName("pink"), avatar: 2,),
-                  AvatarOption(color: colors.withName("blue"), avatar: 3,),
-                  AvatarOption(color: colors.withName("cyan"), avatar: 4,),
-                  AvatarOption(color: colors.withName("blue"), avatar: 5,),
-                  AvatarOption(color: colors.withName("pink"), avatar: 6,),
-                ],
+              Container(
+                margin: EdgeInsets.all(10),
+                child: Wrap(
+                  children: <Widget>[
+                    AvatarOption(color: colors.withName("yellow"), avatar: 1,),
+                    AvatarOption(color: colors.withName("pink"), avatar: 2,),
+                    AvatarOption(color: colors.withName("blue"), avatar: 3,),
+                    AvatarOption(color: colors.withName("cyan"), avatar: 4,),
+                    AvatarOption(color: colors.withName("blue"), avatar: 5,),
+                    AvatarOption(color: colors.withName("pink"), avatar: 6,),
+                  ],
+                ),
               ),
-            ),
-            Container(
-              margin: EdgeInsets.all(25),
-              child: Row(
-                children: <Widget>[
-                  Text('USERNAME', style: GoogleFonts.getFont(
-                      'Chelsea Market', fontSize: 20),),
-                ],
-              ),
-            )
-          ],
+              Container(
+                margin: EdgeInsets.all(25),
+                child: Column(
+                  children: <Widget>[
+                    Text('PICK A USERNAME', style: GoogleFonts.getFont(
+                        'Chelsea Market', fontSize: 20),),
+                    TextField(
+                      textAlign: TextAlign.center,
+                      autocorrect: false,
+                      cursorColor: colors.withName('pink'),
+                      style: GoogleFonts.getFont('Chelsea Market', fontSize: 18),
+                      decoration: InputDecoration(
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: colors.withName('pink'), width: 5),),
+                          focusedBorder
+                              : UnderlineInputBorder(
+                            borderSide: BorderSide(color: colors.withName(
+                                'pink'),
+                                width: 5),)
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
