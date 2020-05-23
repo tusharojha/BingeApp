@@ -64,8 +64,16 @@ class _SignupScreenState extends State<SignupScreen> {
                 margin: EdgeInsets.all(25),
                 child: Column(
                   children: <Widget>[
-                    Text('PICK A USERNAME', style: GoogleFonts.getFont(
-                        'Chelsea Market', fontSize: 20),),
+                    RichText(
+                      text: TextSpan(
+                          style: GoogleFonts.getFont(
+                              'Chelsea Market', fontSize: 20, color: Colors.black),
+                          children: [
+                            TextSpan(text: 'PICK A '),
+                            TextSpan(text: 'USERNAME', style: TextStyle(color: colors.withName('pink')))
+                          ]
+                      ),
+                    ),
                     TextField(
                       textAlign: TextAlign.center,
                       autocorrect: false,
