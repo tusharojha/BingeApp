@@ -1,6 +1,7 @@
 import 'package:binge/assets/colors.dart';
 import 'package:binge/widgets/AvatarOption.dart';
 import 'package:binge/widgets/WelcomeLabel.dart';
+import 'package:binge/bloc/signupbloc.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,14 +16,6 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Container(
-        margin: EdgeInsets.all(10),
-        child: IconButton(
-          iconSize: 50,
-          onPressed: (){},
-          icon: Icon(Icons.chevron_right, color: colors.withName('pink'),),
-        ),
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -48,7 +41,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.all(10),
+                margin: EdgeInsets.all(5),
                 child: Wrap(
                   children: <Widget>[
                     AvatarOption(color: colors.withName("yellow"), avatar: 1,),
@@ -91,6 +84,15 @@ class _SignupScreenState extends State<SignupScreen> {
                       ),
                     )
                   ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(50), boxShadow: [BoxShadow(blurRadius: 4, spreadRadius: 2, offset: Offset(1.0, 3.0), color: Colors.grey)]),
+                child: IconButton(
+                  iconSize: 50,
+                  onPressed: (){},
+                  icon: Icon(Icons.chevron_right, color: colors.withName('pink'),),
                 ),
               )
             ],

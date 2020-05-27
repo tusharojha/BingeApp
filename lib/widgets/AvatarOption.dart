@@ -17,7 +17,7 @@ class _AvatarOptionState extends State<AvatarOption> {
     return Container(
       height: 100,
       width: 100,
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.all(5),
       color: widget.color,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
