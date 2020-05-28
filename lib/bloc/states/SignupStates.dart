@@ -1,6 +1,6 @@
 import 'package:binge/models/User.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 abstract class SignupState extends Equatable {
   const SignupState();
@@ -22,4 +22,13 @@ class SignupSuccessful extends SignupState {
 
   @override
   List<Object> get props => [user];
+}
+
+class SignupAvatarSet extends SignupState {
+  final int avatar;
+
+  const SignupAvatarSet({@required this.avatar}) : assert(avatar != null);
+
+  @override
+  List<Object> get props => [avatar];
 }

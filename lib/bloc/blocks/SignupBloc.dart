@@ -10,6 +10,8 @@ class SignupBloc extends Bloc<SignupEvent, SignupState>{
   Stream<SignupState> mapEventToState(SignupEvent event) async* {
     if(event is Signup){
       yield SignupLoading();
+    } else if (event is SetAvatar) {
+      yield SignupAvatarSet(avatar: event.avatar);
     }
   }
 
