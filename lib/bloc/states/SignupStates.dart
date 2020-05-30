@@ -13,7 +13,14 @@ class SignupIdle extends SignupState {}
 
 class SignupLoading extends SignupState {}
 
-class SignupError extends SignupState {}
+class SignupError extends SignupState {
+  final String message;
+
+  const SignupError({@required this.message}) : assert(message != null);
+
+  @override
+  List<Object> get props => [message];
+}
 
 class SignupSuccessful extends SignupState {
   final User user;

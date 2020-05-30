@@ -20,7 +20,7 @@ class _AvatarOptionState extends State<AvatarOption> {
       builder: (context, state) {
         return Opacity(
           opacity: state is SignupAvatarSet && state.avatar == widget.avatar ||
-                  state is SignupIdle
+                  state is! SignupAvatarSet
               ? 1.0
               : 0.5,
           child: Container(
@@ -46,7 +46,11 @@ class _AvatarOptionState extends State<AvatarOption> {
                             .add(SetAvatar(avatar: widget.avatar));
                       },
                       child: SvgPicture.asset(
-                          'assets/avatars/${widget.avatar}.svg'))),
+                        'assets/avatars/${widget.avatar}.svg',
+                        placeholderBuilder: (_) => Center(
+                          child: CircularProgressIndicator(),
+                        ),
+                      ))),
             ),
           ),
         );
