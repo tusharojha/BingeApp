@@ -1,3 +1,4 @@
+import 'package:binge/screens/HomeScreen.dart';
 import 'package:binge/screens/SignupScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Binge: A Bingo Game!',
       debugShowCheckedModeBanner: false,
-      home: SignupScreen(),
+      home: HomeScreen(),
     );
   }
 }
