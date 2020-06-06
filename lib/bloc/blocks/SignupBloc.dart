@@ -34,9 +34,12 @@ class SignupBloc extends Bloc<SignupEvent, SignupState> {
 
     if (response.statusCode == 201) {
       if (response.headers['x-auth'] != null) {
-        user.token = response.headers['x-access-token'];
+        user.token = response.headers['x-auth'];
         SharedPreferences preferences = await SharedPreferences.getInstance();
         preferences.setString('user', user.toJson());
+        preferences.setInt('matchesWon', 0);
+        preferences.setInt('matchesPlayed', 0);
+        preferences.setInt('bingeStars', 0);
         return SignupSuccessful(user: user);
       } else {
         return SignupError(message: 'ERROR D_SIGNUP: Internal Server Error');

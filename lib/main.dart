@@ -1,6 +1,6 @@
-import 'package:binge/screens/HomeScreen.dart';
-import 'package:binge/screens/SignupScreen.dart';
 import 'package:flutter/material.dart';
+
+import './screens/SplashScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Binge: A Bingo Game!',
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: SplashScreen(),
     );
   }
 }
