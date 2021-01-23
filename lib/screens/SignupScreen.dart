@@ -51,19 +51,19 @@ class _SignupScreenState extends State<SignupScreen> {
                       child: Wrap(
                         children: <Widget>[
                           AvatarOption(
-                            color: colors.withName("yellow"),
+                            color: colors.withName("orange"),
                             avatar: 1,
                           ),
                           AvatarOption(
-                            color: colors.withName("pink"),
+                            color: colors.withName("brown"),
                             avatar: 2,
                           ),
                           AvatarOption(
-                            color: colors.withName("blue"),
+                            color: colors.withName("green"),
                             avatar: 3,
                           ),
                           AvatarOption(
-                            color: colors.withName("cyan"),
+                            color: colors.withName("pink"),
                             avatar: 4,
                           ),
                           AvatarOption(
@@ -71,7 +71,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             avatar: 5,
                           ),
                           AvatarOption(
-                            color: colors.withName("pink"),
+                            color: colors.withName("yellow"),
                             avatar: 6,
                           ),
                         ],
@@ -83,32 +83,35 @@ class _SignupScreenState extends State<SignupScreen> {
                         children: <Widget>[
                           RichText(
                             text: TextSpan(
-                                style: GoogleFonts.getFont('Chelsea Market',
-                                    fontSize: 20, color: Colors.black),
-                                children: [
-                                  TextSpan(text: 'PICK A '),
-                                  TextSpan(
-                                      text: 'USERNAME',
-                                      style: TextStyle(
-                                          color: colors.withName('pink')))
-                                ]),
+                              style: GoogleFonts.getFont('Chelsea Market',
+                                  fontSize: 20, color: Colors.black),
+                              children: [
+                                TextSpan(text: 'PICK A '),
+                                TextSpan(
+                                  text: 'USERNAME',
+                                  style: TextStyle(
+                                    color: colors.withName('pink'),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           TextField(
                             controller: _username,
                             maxLength: 15,
                             textAlign: TextAlign.center,
                             autocorrect: false,
-                            cursorColor: colors.withName('pink'),
+                            cursorColor: colors.withName('orange'),
                             style: GoogleFonts.getFont('Chelsea Market',
                                 fontSize: 20),
                             decoration: InputDecoration(
                               enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: colors.withName('pink'), width: 5),
+                                    color: colors.withName('orange'), width: 5),
                               ),
                               focusedBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: colors.withName('pink'), width: 5),
+                                    color: colors.withName('orange'), width: 5),
                               ),
                             ),
                           )
@@ -205,7 +208,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         }
                       },
                       child: Container(),
-                    )
+                    ),
                   ],
                 );
               },
