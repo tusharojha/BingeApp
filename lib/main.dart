@@ -1,3 +1,4 @@
+import 'package:binge/screens/LobbyScreen.dart';
 import 'package:flutter/material.dart';
 
 import './screens/SplashScreen.dart';
