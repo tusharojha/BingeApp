@@ -46,25 +46,10 @@ class _LobbyScreenState extends State<LobbyScreen> {
                     itemBuilder: (context, index) {
                       return UserCard(
                         name: 'TUSHAR OJHA',
-                        starCount: 2,
+                        starCount: 3,
                         avatar: 'assets/avatars/1.svg',
                       );
                     },
-                  ),
-                ),
-                Container(
-                  child: Center(
-                    child: FlatButton(
-                      padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0,),
-                      onPressed: () {},
-                      child: Text(
-                        'START',
-                        style: TextStyle(
-                          fontSize: 30.0,
-                        ),
-                      ),
-                      color: colors.withName("yellow"),
-                    ),
                   ),
                 ),
               ],
@@ -72,6 +57,25 @@ class _LobbyScreenState extends State<LobbyScreen> {
           ),
         ),
       ),
+        bottomNavigationBar: Container(
+          height: 80,
+          child: Center(
+            child: FlatButton(
+              padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0,),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0))
+              ),
+              onPressed: () {},
+              child: Text(
+                'START',
+                style: TextStyle(
+                  fontSize: 30.0,
+                ),
+              ),
+              color: colors.withName("yellow"),
+            ),
+          ),
+        )
     );
   }
 }

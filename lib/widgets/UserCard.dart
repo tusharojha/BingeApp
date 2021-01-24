@@ -12,11 +12,11 @@ class UserCard extends StatelessWidget {
     return Column(
       children: [
         Container(
-          color: colors.withName('pink'),
           padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0,),
-//      decoration: BoxDecoration(
-//        borderRadius: BorderRadius.circular(5.0),
-//      ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            color: colors.withName('pink'),
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -45,8 +45,9 @@ class UserCard extends StatelessWidget {
 //                    shrinkWrap: true,
 //                    scrollDirection: Axis.horizontal,
 //                    itemBuilder: (context, index) {
-//                      return Text(
-//                        'star',
+//                      return Icon(
+//                        Icons.camera,
+//                        size: 5,
 //                      );
 //                    },
 //                  ),

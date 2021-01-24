@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Binge: A Bingo Game!',
       debugShowCheckedModeBanner: false,
-      //home: SplashScreen(),
-      home: LobbyScreen(),
+      home: SplashScreen(),
+      //home: LobbyScreen(),
     );
   }
 }
