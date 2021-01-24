@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
       title: 'Binge: A Bingo Game!',
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
-      //home: LobbyScreen(),
     );
   }
 }
