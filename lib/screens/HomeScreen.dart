@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: customColors.withName('blue'),
                       child: Text(
                         state is LoggedInState
-                            ? state.user.name.toUpperCase()
+                            ? state.user.name
                             : 'WELCOME',
                         style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
