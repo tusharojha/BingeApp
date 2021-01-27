@@ -50,10 +50,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.only(top: 10, bottom: 10),
-                      width: MediaQuery.of(context).size.width * 0.75,
+                      height: 45.0,
+                      width: MediaQuery.of(context).size.width * 0.60,
                       alignment: Alignment.center,
-                      color: customColors.withName('blue'),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: customColors.withName('blue'),
+                      ),
                       child: Text(
                         state is LoggedInState
                             ? state.user.name.toUpperCase()
@@ -61,6 +64,22 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                     ),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.025,),
+                    Container(
+                      height: 45.0,
+                      width: MediaQuery.of(context).size.width * 0.1,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: customColors.withName('blue'),
+                      ),
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.edit),
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.025,),
                   ],
                 ),
                 Container(
@@ -162,6 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   offset: Offset(20, 20),
                                 ),
                               ],
+                              borderRadius: BorderRadius.circular(20.0),
                               color: customColors.withName('blue'),
                             ),
                             width: 0.45 * MediaQuery.of(context).size.width,
@@ -186,6 +206,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   offset: Offset(20, 20),
                                 ),
                               ],
+                              borderRadius: BorderRadius.circular(20.0),
                               color: customColors.withName('blue'),
                             ),
                             margin:
