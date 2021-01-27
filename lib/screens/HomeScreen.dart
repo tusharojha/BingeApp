@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       child: Text(
                         state is LoggedInState
-                            ? state.user.name.toUpperCase()
+                            ? state.user.name
                             : 'WELCOME',
                         style: TextStyle(color: Colors.white, fontSize: 20),
                       ),

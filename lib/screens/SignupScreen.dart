@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'HomeScreen.dart';
+
 class SignupScreen extends StatefulWidget {
   @override
   _SignupScreenState createState() => _SignupScreenState();
@@ -204,7 +206,9 @@ class _SignupScreenState extends State<SignupScreen> {
                           // dismiss loading dialog
                           Navigator.of(context, rootNavigator: true)
                               .pop('dialog');
-//                          Navigator.push(context, route);
+                          Navigator.pop(context);
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (_) => HomeScreen()));
                         }
                       },
                       child: Container(),
