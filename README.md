@@ -1,6 +1,6 @@
 # binge
 
-A Bingo Game
+A Bingo Game App
 
 ## Getting Started
 
